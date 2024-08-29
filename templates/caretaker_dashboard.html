@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caretaker Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Add Dog</h2>
+        <form method="POST" action="/add_dog">
+            <div class="form-group">
+                <label for="name">Dog's Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter dog's name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Owner's Phone Number</label>
+                <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="Enter owner's phone number" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Dog</button>
+        </form>
+        <h2 class="text-center mt-5">Update Dog Information</h2>
+        {% for dog in dogs %}
+            <div>
+                <h4>{{ dog.name }}</h4>
+                <a href="{{ url_for('update_dog', dog_id=dog.id) }}" class="btn btn-secondary">Update</a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

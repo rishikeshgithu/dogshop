@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kennel Boarding Form</title>
+</head>
+<body>
+    <h2>Kennel Boarding Form</h2>
+    <form action="{{ url_for('submit_boarding_form') }}" method="POST">
+        <h3>Pet Information</h3>
+        <label>Pet's Name:</label>
+        <input type="text" name="pet_name" required><br>
+
+        <label>DOB:</label>
+        <input type="date" name="dob"><br>
+
+        <label>Age:</label>
+        <input type="number" name="age"><br>
+
+        <label>Gender:</label>
+        <input type="text" name="gender"><br>
+
+        <label>Breed:</label>
+        <input type="text" name="breed"><br>
+
+        <label>Pet's Vaccination / Deworming / Bravecto Details:</label>
+        <textarea name="vaccination_details"></textarea><br>
+
+        <h3>Pet Owner Information</h3>
+        <label>Pet Owner's Name:</label>
+        <input type="text" name="owner_name" required><br>
+
+        <label>Aadhar Number:</label>
+        <input type="text" name="aadhar_number"><br>
+
+        <label>Address:</label>
+        <textarea name="address"></textarea><br>
+
+        <label>Email Address:</label>
+        <input type="email" name="email"><br>
+
+        <label>Cont. No.:</label>
+        <input type="tel" name="contact_number"><br>
+
+        <label>Emergency Cont. Name:</label>
+        <input type="text" name="emergency_contact_name"><br>
+
+        <label>Cont. No.:</label>
+        <input type="tel" name="emergency_contact_number"><br>
+
+        <h3>Veterinary Information</h3>
+        <label>Vet. Clinic Name:</label>
+        <input type="text" name="vet_clinic_name"><br>
+
+        <label>Cont. No.:</label>
+        <input type="tel" name="vet_contact_number"><br>
+
+        <h3>Types of Boardings</h3>
+        <label><input type="checkbox" name="boarding_type" value="Day Care"> Day Care (Morning 10 AM to 8 PM)</label><br>
+        <label><input type="checkbox" name="boarding_type" value="Entire Day"> Entire Day (24 Hrs)</label><br>
+
+        <h3>Boarding Dates</h3>
+        <label>Check-in Date:</label>
+        <input type="date" name="check_in_date"><br>
+
+        <label>Check-Out Date:</label>
+        <input type="date" name="check_out_date"><br>
+
+        <h3>Choose your Pet's Meal</h3>
+        <label>Breakfast:</label><br>
+        <label><input type="checkbox" name="breakfast" value="Eggs"> Eggs</label>
+        <label><input type="checkbox" name="breakfast" value="Chicken"> Chicken</label>
+        <label><input type="checkbox" name="breakfast" value="Veggies"> Veggies</label>
+        <label><input type="checkbox" name="breakfast" value="Curd"> Curd</label>
+        <label><input type="checkbox" name="breakfast" value="Kibbles"> Kibbles</label><br>
+
+        <label>Lunch:</label><br>
+        <label><input type="checkbox" name="lunch" value="Eggs"> Eggs</label>
+        <label><input type="checkbox" name="lunch" value="Chicken"> Chicken</label>
+        <label><input type="checkbox" name="lunch" value="Veggies"> Veggies</label>
+        <label><input type="checkbox" name="lunch" value="Curd"> Curd</label>
+        <label><input type="checkbox" name="lunch" value="Kibbles"> Kibbles</label><br>
+
+        <label>Dinner:</label><br>
+        <label><input type="checkbox" name="dinner" value="Eggs"> Eggs</label>
+        <label><input type="checkbox" name="dinner" value="Chicken"> Chicken</label>
+        <label><input type="checkbox" name="dinner" value="Veggies"> Veggies</label>
+        <label><input type="checkbox" name="dinner" value="Curd"> Curd</label>
+        <label><input type="checkbox" name="dinner" value="Kibbles"> Kibbles</label><br>
+
+        <label>Other Information:</label>
+        <textarea name="other_information"></textarea><br>
+
+        <h3>What to Bring</h3>
+        <p>Dry Food / Treats, Water Bowl, Leash, Blankets, Medication (If any), Vaccination Book (Will return after taking snaps)</p>
+
+        <h3>Medication Instructions</h3>
+        <label>Medication Name:</label>
+        <input type="text" name="medication_name"><br>
+
+        <label>Dosage:</label>
+        <input type="text" name="dosage"><br>
+
+        <label>Administration Instructions:</label>
+        <textarea name="administration_instructions"></textarea><br>
+
+        <label>Last Heat Cycle Date (If female):</label>
+        <input type="date" name="last_heat_cycle_date"><br>
+
+        <h3>Temperament</h3>
+        <label>Happy Going...</label><br>
+        <label><input type="radio" name="temperament" value="1"> 1</label>
+        <label><input type="radio" name="temperament" value="2"> 2</label>
+        <label><input type="radio" name="temperament" value="3"> 3</label>
+        <label><input type="radio" name="temperament" value="4"> 4</label>
+        <label><input type="radio" name="temperament" value="5"> 5</label> ...Aggressive<br>
+
+        <h3>Socializing</h3>
+        <label>Do you want your pet to socialize with other pets during the stay?</label>
+        <input type="text" name="socializing"><br>
+
+        <label>Does your pet have separation anxiety?</label>
+        <input type="text" name="separation_anxiety"><br>
+
+        <h3>Add On Services (Video will be shared through WhatsApp)</h3>
+        <label>Bath Specifications:</label>
+        <textarea name="bath_specifications"></textarea><br>
+
+        <label>Swimming Specifications:</label>
+        <textarea name="swimming_specifications"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

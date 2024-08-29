@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Dog</title>
+</head>
+<body>
+    <h1>Update Dog Info</h1>
+    <form method="POST">
+        <label for="dog_name">Dog Name:</label>
+        <input type="text" name="dog_name" value="{{ dog.name }}" required>
+        <br>
+        
+        <label for="dog_breed">Dog Breed:</label>
+        <input type="text" name="dog_breed" value="{{ dog.breed | default('') }}">
+        <br>
+    
+        <label for="eating_time">Eating Time:</label>
+        <input type="time" name="eating_time" value="{{ dog.eating_time | default('') }}">
+        <br>
+
+        <label for="washroom_time">Washroom Time:</label>
+        <input type="time" name="washroom_time" value="{{ dog.eating_time | default('') }}">
+        <br>
+    
+        <button type="submit">Update</button>
+    </form> 
+</body>
+</html>
