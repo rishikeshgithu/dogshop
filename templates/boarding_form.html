@@ -5,6 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kennel Boarding Form</title>
 </head>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color:  #dbb819;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+    }
+    h2 {
+        text-align: center;
+        color: #fff;
+    }
+    form {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        max-width: 600px;
+        margin: auto;
+    }
+    h3 {
+        color: #dbb819;
+        border-bottom: 2px solid #dbb819;
+        padding-bottom: 10px;
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+    button {
+        background-color: #dbb819;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+    button:hover {
+        background-color: #dab915;
+    }
+    p {
+        font-size: 14px;
+        color: #666;
+    }
+</style>
 <body>
     <h2>Kennel Boarding Form</h2>
     <form action="{{ url_for('submit_boarding_form') }}" method="POST">
